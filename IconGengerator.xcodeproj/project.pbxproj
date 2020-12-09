@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,9 @@
 		31821224257F5839004CA456 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31821223257F5839004CA456 /* ViewController.swift */; };
 		31821226257F583A004CA456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31821225257F583A004CA456 /* Assets.xcassets */; };
 		31821229257F583A004CA456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31821227257F583A004CA456 /* Main.storyboard */; };
+		3182124B258069DF004CA456 /* DragDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3182124A258069DF004CA456 /* DragDropView.swift */; };
+		3182124F258072B8004CA456 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3182124E258072B8004CA456 /* SnapKit */; };
+		318212552580781E004CA456 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 318212542580781E004CA456 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,7 @@
 		31821228257F583A004CA456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3182122A257F583B004CA456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3182122B257F583B004CA456 /* IconGengerator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IconGengerator.entitlements; sourceTree = "<group>"; };
+		3182124A258069DF004CA456 /* DragDropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDropView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +32,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				318212552580781E004CA456 /* Kingfisher in Frameworks */,
+				3182124F258072B8004CA456 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +45,7 @@
 			children = (
 				31821220257F5839004CA456 /* IconGengerator */,
 				3182121F257F5839004CA456 /* Products */,
+				318212532580781E004CA456 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,8 +66,16 @@
 				31821227257F583A004CA456 /* Main.storyboard */,
 				3182122A257F583B004CA456 /* Info.plist */,
 				3182122B257F583B004CA456 /* IconGengerator.entitlements */,
+				3182124A258069DF004CA456 /* DragDropView.swift */,
 			);
 			path = IconGengerator;
+			sourceTree = "<group>";
+		};
+		318212532580781E004CA456 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -79,6 +94,10 @@
 			dependencies = (
 			);
 			name = IconGengerator;
+			packageProductDependencies = (
+				3182124E258072B8004CA456 /* SnapKit */,
+				318212542580781E004CA456 /* Kingfisher */,
+			);
 			productName = IconGengerator;
 			productReference = 3182121E257F5839004CA456 /* IconGengerator.app */;
 			productType = "com.apple.product-type.application";
@@ -106,6 +125,10 @@
 				Base,
 			);
 			mainGroup = 31821215257F5839004CA456;
+			packageReferences = (
+				3182124D258072B8004CA456 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				31821251258076BE004CA456 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 3182121F257F5839004CA456 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -133,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31821224257F5839004CA456 /* ViewController.swift in Sources */,
+				3182124B258069DF004CA456 /* DragDropView.swift in Sources */,
 				31821222257F5839004CA456 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +354,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3182124D258072B8004CA456 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		31821251258076BE004CA456 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3182124E258072B8004CA456 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3182124D258072B8004CA456 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		318212542580781E004CA456 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 31821251258076BE004CA456 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 31821216257F5839004CA456 /* Project object */;
 }
